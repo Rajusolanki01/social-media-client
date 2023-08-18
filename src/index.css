@@ -1,13 +1,225 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #dff2df;
+  scrollbar-width: thin; 
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); 
+}
+
+:root {
+  --background-color: #dafeda;
+  --border-color: #dafeda;
+  --accent-color: #479bd3;
+  --scrollbar-thumb: #0b0b0bbb; 
+  --scrollbar-track: #f0efef; 
+}
+
+
+::-webkit-scrollbar {
+  width: 8px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 6px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  color: #030303;
+  font-weight: 700;
+}
+
+h3,
+h6 {
+  font-weight: 700;
+}
+
+p {
+  color: #000000;
+  font-size: 1rem;
+}
+
+.hover-link {
+  cursor: pointer;
+}
+
+.hover-link:active {
+  color: red;
+}
+
+.container {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.btn-primary {
+  --color: rgb(140, 199, 238);;
+  padding: 0.7em 1.8em;
+  background-color: #dff2df;
+  border: 1px solid rgb(188, 218, 230);
+  color: #000000;
+  border-radius: 0.8em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  font-family: inherit;
+  z-index: 1;
+}
+
+.btn-primary::before,
+.btn-primary::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary::before {
+  top: -1em;
+  left: -1em;
+}
+
+.btn-primary::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.btn-primary:hover::before,
+.btn-primary:hover::after {
+  height: 410px;
+  width: 550px;
+  color: #ffffff;
+}
+.btn-primary:hover {
+  color: #000000;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  filter: brightness(0.9);
+}
+
+.btn-secondary {
+  --color: rgb(0, 0, 0);
+  padding: 0.7em 1.8em;
+  background-color: #fefbe9;
+  border: 1px solid rgb(49, 49, 49);
+  color: #000000;
+  border-radius: 0.8em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  font-family: inherit;
+  z-index: 1;
+}
+
+.btn-secondary::before,
+.btn-secondary::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 0.3s ease-in-out;
+}
+
+.btn-secondary::before {
+  top: -1em;
+  left: -1em;
+}
+
+.btn-secondary::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.btn-secondary:hover::before,
+.btn-secondary:hover::after {
+  height: 410px;
+  width: 550px;
+  color: #ffffff;
+}
+.btn-secondary:hover {
+  color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  filter: brightness(0.9);
+}
+
+
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.5em 1.5em;
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 10px;
+
+    .caption{
+      margin-right: 21rem;
+    }
+    .time-ago{
+      margin-right: 19.1rem;
+    }
+  }
+}
+
+/* Media Query for Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.6em 1.6em;
+    font-size: 16px;
+  }
 }

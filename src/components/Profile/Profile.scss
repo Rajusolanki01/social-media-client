@@ -1,0 +1,128 @@
+.Profile {
+    margin-top: 60px;
+    height: 100vh;
+
+    .container {
+        display: flex;
+        gap: 40px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .left-part {
+        flex: 2;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column; /* Add this to make sure items are aligned vertically */
+
+        .no-uploads-message {
+            font-size: 2rem;
+            display: flex; /* Add this to center horizontally */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100%; /* Fill the available height */
+            color: #000000;
+            animation: fade-in 1s ease-in-out forwards; 
+
+            @keyframes fade-in {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+
+    .right-part {
+        flex: 1;
+        margin-top: 18px;
+    }
+
+    .profile-card {
+        text-align: center;
+        border: 1px solid var(--border-color);
+        background-color: #fefbe9;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        object-fit: fill;
+        border-radius: 4px;
+        padding: 25px;
+
+        .follow-link {
+            margin-top: 30px;
+            padding: 10px 90px;
+        }
+    }
+
+    .user-img {
+        width: 155px;
+        height: 160px;
+        border-radius: 50%;
+    }
+
+    .user-name,
+    .follower-info {
+        margin-top: 15px;
+        color: rgb(15, 15, 15);
+    }
+
+    .follower-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        .heading {
+            color: rgb(13, 13, 13);
+        }
+    }
+
+    .follow,
+    .update-profile {
+        margin-top: 40px;
+        display: inline-block;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Styles for phones */
+    .container {
+        flex-shrink: 2;
+    }
+    .left-part {
+        flex: 2;
+        max-width: 100%;
+    }
+    .right-part {
+        flex: 1;
+        margin-top: 0;
+    }
+    .profile-card {
+        padding: 15px;
+    }
+    .follow-link {
+        padding: 10px 40px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for tablets */
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .left-part {
+        flex: 1;
+        max-width: 100%;
+    }
+    .right-part {
+        flex: 1;
+        margin-top: 0;
+    }
+}

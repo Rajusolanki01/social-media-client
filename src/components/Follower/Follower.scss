@@ -1,0 +1,67 @@
+.Follower {
+    display: flex;
+    margin: 5px;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+
+    .user-info {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+
+        .name {
+            align-self: center;
+            color: black;
+        }
+    }
+
+    .follow-link {
+        margin: 0;
+    }
+
+    /* Media Queries for different screen sizes */
+
+    /* For tablets */
+    @media  (max-width:1024) {
+        height: 50px;
+
+        .user-info {
+            gap: 11px;
+            margin: 20px;
+
+            .name {
+                font-size:20px;
+            }
+        }
+    }
+
+    @media (max-width: 608px)  {
+        height: 50px;
+
+        .user-info {
+            gap: 11px;
+            margin: 20px;
+
+            .name {
+                font-size:16px;
+            }
+        }
+    }
+
+    /* For phones */
+    @media (max-width: 480px) and (max-width:600px) {
+        height: 40px;
+
+        .user-info {
+            gap: 11px;
+            margin: 20px;
+
+            .name {
+                font-size: 16px;
+            }
+        }
+    }
+}

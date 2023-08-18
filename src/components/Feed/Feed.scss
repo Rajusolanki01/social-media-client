@@ -1,0 +1,71 @@
+.Feed {
+   margin-top: 60px;
+
+   .container {
+      display: flex;
+      gap: 40px;
+      overflow: hidden;
+      height: 100vh;
+   }
+
+   .left-part {
+      flex: 2;
+      overflow-y: auto;
+      height: 100vh;
+   }
+
+   .right-part {
+      flex: 1;
+      margin-top: 18px;
+      overflow-y: auto;
+
+      .following {
+         border: 1px solid var(--border-color);
+         border-radius: 10px;
+         background-color: #fefbe9;
+      }
+   }
+
+   .suggestions {
+      margin-top: 30px;
+      border: 1px solid var(--border-color);
+      background-color: #fefbe9;
+      color: black;
+      border-radius: 10px;
+      overflow-y: auto;
+   }
+
+   .title {
+      margin-bottom: 14px;
+      margin-left: 10px;
+      color: black;
+   }
+
+   /* Media Queries for different screen sizes */
+
+   /* For tablets */
+   @media (max-width: 768px) {
+      .container {
+         flex-direction: column;
+         gap: 20px;
+      }
+
+      .left-part,
+      .right-part {
+         flex: 1;
+      }
+   }
+
+   /* For phones */
+   @media (max-width: 480px) {
+      .container {
+         flex-direction: column;
+         gap: 10px;
+      }
+
+      .left-part,
+      .right-part {
+         flex: 1;
+      }
+   }
+}

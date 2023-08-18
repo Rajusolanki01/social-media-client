@@ -1,0 +1,151 @@
+.signup {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assests/Front.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  .signup-box {
+    padding: 40px;
+    min-width: 350px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background: transparent;
+    background: rgba(255, 255, 255, 0.92);
+    background: -moz-radial-gradient(circle, rgba(206, 227, 254, 1) 27%, rgba(233, 237, 237, 0.513) 74%);
+    background: -webkit-radial-gradient(circle, rgba(206, 227, 254, 1) 27%, rgba(222, 227, 228, 0.513) 74%);
+    background: radial-gradient(circle, rgb(247, 248, 250) 27%, rgba(221, 226, 226, 0.513) 74%);
+    filter: progid:DXImageTransform.Microsoft.gradient(
+          startColorstr="#cee3fe",
+          endColorstr="#46a4b0",
+          GradientType=1
+        );
+    box-shadow: 15px 15px 25px 1px #43535fc5;
+  }
+  .success-message {
+    font-weight: bolder;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  label,
+  input {
+    display: block;
+    width: 100%;
+    margin-block: 8px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+
+  .submit {
+    background-color: #3d99cadd;
+    color: white;
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    transition: ease-in 0.2s;
+  }
+
+  .submit:hover {
+    background-color: #020709;
+    transform: scale(1.05);
+  }
+
+  .subheading {
+    font-size: 1rem;
+    margin-top: 16px;
+    font-weight: bold;
+
+    .link {
+      text-decoration: none;
+      color: rgb(14, 14, 14);
+      margin: 2px;
+      padding: 4px 10px;
+      transition: ease-in 0.3s;
+    }
+
+    .link:hover {
+      color: #f9fdff;
+      border-radius: 8px;
+      background-color: #141719;
+      transform: scale(1);
+    }
+  }
+}
+
+.password-input {
+  position: relative;
+
+  input.password {
+    padding-right: 40px;
+  }
+
+  .password-toggle {
+    position: absolute;
+    top: 76%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+  }
+}
+
+/* Styles for Mobile Phones */
+@media (max-width: 600px) {
+  .signup {
+    background-image: url('../../assests/front2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .signup-box {
+    min-width: 350px;
+    padding: 10px;
+
+  }
+  .heading {
+    font-size: 1.5rem;
+  }
+  label,
+  input {
+    margin-block: 4px;
+  }
+  .submit {
+    font-size: 0.9rem;
+    margin-top: 12px;
+  }
+  .subheading {
+    font-size: 0.9rem;
+    margin-top: 12px;
+  }
+}
+
+/* Styles for Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .signup-box {
+    min-width: 300px;
+    padding: 30px;
+  }
+  /* Adjust other styles as needed */
+}
