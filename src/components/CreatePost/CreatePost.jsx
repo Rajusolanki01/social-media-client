@@ -60,42 +60,43 @@ function CreatePost() {
 
   return (
     <div className="CreatePost">
-      <div className="left-part-1">
-        <Avatar className="user-avatar" src={myProfile?.avatar?.url} />
-      </div>
-      <div className="right-part-1">
-        <input
-          value={caption}
-          type="text"
-          placeholder="What's on your mind?"
-          className="captionInput"
-          onChange={(e) => setCaption(e.target.value)}
-        />
-        {postImg && (
-          <div className="img-container">
-            <img className="post-img" src={postImg} alt="Post_img" />
-          </div>
-        )}
-
-        <div className="bottom-part">
-          <div className="input-post-img">
-            <label htmlFor="inputImg" className="labelImg">
-              <BsCardImage />
-            </label>
-            <input
-              className="inputImg"
-              id="inputImg"
-              type="file"
-              accept="image/*"
-              onChange={handleImgChange}
-            />
-          </div>
-          <span className="btn-primary" onClick={handlePostSubmit}>
-            Post
-          </span>
+    <div className="left-part-1">
+      <Avatar src={myProfile?.avatar?.url} />
+    </div>
+    <div className="right-part-1">
+      <input
+        value={caption}
+        type="text"
+        className="captionInput"
+        placeholder="what's on your mind ?"
+        onChange={(e) => {
+          setCaption(e.target.value);
+        }}
+      />
+      {postImg && (
+        <div className="img-container">
+          <img className="post-img" src={postImg} alt="post-img" />
         </div>
+      )}
+      <div className="bottom-part">
+        <div className="input-post-img">
+          <label htmlFor="inputImg" className="label-img">
+            <BsCardImage />
+          </label>
+          <input
+            className="inputImg"
+            id="inputImg"
+            type="file"
+            accept="image/*"
+            onChange={handleImgChange}
+          />
+        </div>
+        <button className="post-btn btn-primary" onClick={handlePostSubmit}>
+          Post
+        </button>
       </div>
     </div>
+  </div>
   );
 }
 

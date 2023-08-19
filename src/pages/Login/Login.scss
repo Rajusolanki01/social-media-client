@@ -8,11 +8,7 @@
   background-size: cover;
   background-position: center;
 
-  .heading {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 900;
-  }
+
 
   .login-box {
     padding: 45px;
@@ -31,16 +27,24 @@
       );
     box-shadow: 15px 15px 25px 1px #43535fc5;
 
-    label,
-    input {
+    .heading {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 900;
+    }
+
+    label {
+      font-weight: 700;
+      margin-block: 10px 5px;
+    }
+
+    input,label
+     {
       display: block;
       width: 100%;
       margin-block: 8px;
     }
 
-    label {
-      font-weight: bold;
-    }
 
     input {
       padding: 8px 16px;
@@ -106,40 +110,11 @@
 }
 
 /* Styles for Mobile Phones */
-@media (max-width: 600px) {
-  .login {
-    background-image: url('../../assests/front2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+@media screen and (max-width: 430px) {
+  .login{
+    .login-box{
+      min-width: 300px;
+      padding: 40px 25px;
+    }
   }
-  .login-box {
-    min-width: 350px;
-    padding: 10px;
-  }
-  .heading {
-    font-size: 1.5rem;
-  }
-  label,
-  input {
-    margin-block: 4px;
-  }
-  .submit {
-    font-size: 0.9rem;
-    margin-top: 12px;
-  }
-  .subheading {
-    font-size: 0.9rem;
-    margin-top: 12px;
-    font-weight: bold;
-  }
-}
-
-/* Styles for Tablets */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .login-box {
-    min-width: 300px;
-    padding: 30px;
-  }
-  /* Adjust other styles as needed */
 }

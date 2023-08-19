@@ -21,7 +21,7 @@ function NavBar() {
       dispatch(
         showToast({
           type: TOAST_SUCCESS,
-          message: "Logout successfully!'",
+          message: "Logout successfully!",
         })
       )
       dispatch(setLoading(false));

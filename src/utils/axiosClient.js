@@ -7,8 +7,13 @@ import {
   setItem,
 } from "./LocalStorageManager";
 
+let baseURL = "http://localhost:4000";
+if (process.env.NODE_ENV === "production") {
+  baseURL = process.env.REACT_APP_SERVER_BASE_URL;
+}
+
 export const axiosClient = axios.create({
-  baseURL: process.env.REACT_APP_SERVER_BASE_URL,
+  baseURL,
   withCredentials: true,
 });
 
@@ -42,7 +47,6 @@ axiosClient.interceptors.response.use(
     const originalRequest = response.config;
     const { statusCode } = data.statusCode;
     const { error } = data.message;
-
 
     // If the response status code is 401 (unauthorized) and this is not a retry,
     // initiate a token refresh request and retry the original request after getting a new access token.

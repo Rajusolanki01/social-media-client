@@ -1,109 +1,96 @@
-/* Default styling for the CreatePost component */
 .CreatePost {
-    display: flex;
-    border: 1px solid var(--border-color);
-    background-color: #fefbe9;
-    border-radius: 4px;
-    padding: 20px;
-    gap: 20px;
-    margin-top: 22px;
+  display: flex;
+  border: 1px solid var(--border-color);
+  background-color: white;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 4px;
+  margin-top: 20px;
 
-    .left-part-1 {
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: content;
+  .left-part-1 {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: content;
+  }
+
+  .right-part-1 {
+    flex-grow: 1;
+    margin-top: 0;
+
+    input {
+      width: 100%;
+      padding: 8px 16px;
+      border: 1px solid grey;
+      border-radius: 4px;
     }
 
-    .right-part-1 {
-        flex-grow: 1;
-        margin-top: 0;
+    .img-container {
+      margin-top: 20px;
 
-        input {
-            width: 100%;
-            padding: 8px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-        }
-
-        .img-container {
-            margin-top: 20px;
-
-            .post-img {
-                width: 100%;
-                aspect-ratio: 16/9;
-            }
-        }
-
-        .labelImg {
-            display: inline-block;
-            background-color: #dff2df;
-            color: rgb(0, 0, 0);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: 0.3s ease-in-out;
-        }
-
-        .labelImg:hover {
-            color: #000000;
-            background-color: rgb(140, 199, 238);
-            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-            transform: translateY(-2px);
-        }
-
-        .labelImg:active {
-            filter: brightness(0.9);
-        }
-
-        .inputImg {
-            display: none;
-        }
-
-        .bottom-part {
-            display: flex;
-            margin-top: 20px;
-            justify-content: space-between;
-            align-items: center;
-        }
+      .post-img {
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
     }
+
+    .label-img {
+      display: inline-block;
+      background-color: var(--background-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+
+      .label-Img:hover {
+        color: #000000;
+        background-color: rgb(140, 199, 238);
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+      }
+    }
+
+    .label-Img:active {
+      filter: brightness(0.9);
+    }
+
+    .inputImg {
+      display: none;
+    }
+
+    .bottom-part {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+  }
 }
 
-/* Media Queries for different screen sizes */
-
-/* For tablets */
-@media (max-width: 768px) {
-    .CreatePost {
-        /* Adjust your styling for tablet screens here */
-        padding: 10px;
-        flex-direction: column;
-
-        .right-part-1 {
-            margin-top: 10px;
-
-            .img-container {
-                margin-top: 10px;
-            }
-        }
+@media screen and (max-width: 430px) {
+  .CreatePost {
+    .btn-primary {
+      background-color: var(--accent-color);
+      border-radius: 50px;
+      color: white;
+      font-weight: bold;
+      padding: 10px 35px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
-}
 
-/* For phones */
-@media (max-width: 480px) {
-    .CreatePost {
-        /* Adjust your styling for phone screens here */
-        padding: 5px;
-        flex-direction: column;
-
-        .right-part-1 {
-            margin-top: 5px;
-
-            .img-container {
-                margin-top: 5px;
-            }
-        }
+    .btn-primary:hover {
+      background-color: #176ef1;
     }
+
+    .btn-primary:active {
+      background-color: var(--accent-color);
+    }
+  
+  }
+
 }

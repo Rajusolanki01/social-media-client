@@ -12,15 +12,15 @@
     height: 60px;
     padding: 20px;
   }
-}
+
   .content {
     height: 400px;
-  }
-
   img {
     width: 100%;
     height: 100%;
   }
+
+}
 
   .footer {
     padding: 20px;
@@ -57,30 +57,32 @@
     }
   }
 
-
-
-
-@media screen and (max-width: 568px) {
-  /* Styles for small screens */
-  .heading {
-    height: auto;
-    padding: 10px;
-  }
-  .footer {
-    padding: 10px;
-  }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Styles for medium screens */
-  .content {
-    height: 300px;
-  }
-}
 
-@media screen and (min-width: 1025px) {
-  /* Styles for large screens */
-  .Post {
-    margin-top: 30px;
+@media screen and (max-width: 430px) {
+  .Post{
+    height: 400px;
+
+    .content {
+      height: 250px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .footer{
+      padding-block: 5px;
+
+      .caption{
+        margin-top: 3px;
+      }
+
+      .time-ago{
+        margin-top: 3px;
+      }
+    }
   }
 }

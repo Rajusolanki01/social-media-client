@@ -1,67 +1,68 @@
 .Follower {
     display: flex;
-    margin: 5px;
-    padding: 8px;
     justify-content: space-between;
     align-items: center;
     height: 60px;
-
+  
     .user-info {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        cursor: pointer;
-
-        .name {
-            align-self: center;
-            color: black;
-        }
+      display: flex;
+      align-items: center;
+      margin: 5px;
+      gap: 8px;
+      cursor: pointer;
     }
-
+  
+    // h5 {
+    //   color: var(--accent-color);
+    // }
+  
     .follow-link {
-        margin: 0;
+      margin: 0; 
+      margin-right: 10px;
     }
+  }
+  
 
-    /* Media Queries for different screen sizes */
-
-    /* For tablets */
-    @media  (max-width:1024) {
-        height: 50px;
-
-        .user-info {
-            gap: 11px;
-            margin: 20px;
-
-            .name {
-                font-size:20px;
-            }
-        }
+  @media screen and (max-width: 430px) {
+    .Follower {
+      .btn-primary {
+        background-color: var(--accent-color);
+        border-radius: 50px;
+        color: white;
+        font-weight: bold;
+        padding: 10px 35px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .btn-primary:hover {
+        background-color: #176ef1;
+      }
+      
+      .btn-primary:active {
+        background-color: var(--accent-color);
+      }
+      
+      .btn-secondary {
+        border: 2px solid var(--accent-color);
+        border-radius: 50px;
+        color: var(--accent-color);
+        font-weight: bold;
+        padding: 10px 35px;
+        cursor: pointer;
+        border-radius: 4px;
+        background: none;
+      }
+      
+      .btn-secondary:hover {
+        background-color: #f5f2f2;
+      }
+      
+      .btn-secondary:active {
+        background: none;
+      }
     }
-
-    @media (max-width: 608px)  {
-        height: 50px;
-
-        .user-info {
-            gap: 11px;
-            margin: 20px;
-
-            .name {
-                font-size:16px;
-            }
-        }
-    }
-
-    /* For phones */
-    @media (max-width: 480px) and (max-width:600px) {
-        height: 40px;
-
-        .user-info {
-            gap: 11px;
-            margin: 20px;
-
-            .name {
-                font-size: 16px;
-            }
-        }
-    }
-}
+  
+  }
+  

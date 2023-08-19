@@ -68,9 +68,12 @@ p {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 960px;
   margin-inline: auto;
 }
+
+
+
 
 .btn-primary {
   --color: rgb(140, 199, 238);;
@@ -184,42 +187,4 @@ p {
 
 .btn-secondary:active {
   filter: brightness(0.9);
-}
-
-
-
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    padding: 0.5em 1.5em;
-    font-size: 14px;
-  }
-
-  .footer {
-    padding: 10px;
-
-    .caption{
-      margin-right: 21rem;
-    }
-    .time-ago{
-      margin-right: 19.1rem;
-    }
-  }
-}
-
-/* Media Query for Tablets */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  body {
-    font-size: 16px;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    padding: 0.6em 1.6em;
-    font-size: 16px;
-  }
 }

@@ -40,32 +40,29 @@
       margin-left: 10px;
       color: black;
    }
+}
 
-   /* Media Queries for different screen sizes */
+/* Media Queries for different screen sizes */
 
-   /* For tablets */
-   @media (max-width: 768px) {
+/* For tablets */
+@media screen and (max-width: 770px) {
+   .Feed {
       .container {
-         flex-direction: column;
-         gap: 20px;
-      }
-
-      .left-part,
-      .right-part {
-         flex: 1;
+         padding-inline: 20px;
       }
    }
+}
 
-   /* For phones */
-   @media (max-width: 480px) {
+@media screen and (max-width: 430px) {
+   .Feed {
       .container {
          flex-direction: column;
-         gap: 10px;
-      }
+         gap: 5px;
 
-      .left-part,
-      .right-part {
-         flex: 1;
+         .right-part {
+            height: 400px;
+            overflow-y: auto;
+         }
       }
    }
 }
