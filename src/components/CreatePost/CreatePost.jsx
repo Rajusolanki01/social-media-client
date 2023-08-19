@@ -91,7 +91,7 @@ function CreatePost() {
             onChange={handleImgChange}
           />
         </div>
-        <button className="post-btn btn-primary" onClick={handlePostSubmit}>
+        <button className="post-btn btn-primary btn-primary-1" onClick={handlePostSubmit}>
           Post
         </button>
       </div>

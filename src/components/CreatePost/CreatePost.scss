@@ -72,7 +72,7 @@
 
 @media screen and (max-width: 430px) {
   .CreatePost {
-    .btn-primary {
+    .btn-primary-1 {
       background-color: var(--accent-color);
       border-radius: 50px;
       color: white;
@@ -83,11 +83,11 @@
       cursor: pointer;
     }
 
-    .btn-primary:hover {
+    .btn-primary-1:hover {
       background-color: #176ef1;
     }
 
-    .btn-primary:active {
+    .btn-primary-1:active {
       background-color: var(--accent-color);
     }
   
