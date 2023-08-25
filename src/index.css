@@ -200,6 +200,7 @@ p {
     width: 16px;
     height: 16px;
     display: none;
+    color: black;
   }
 
   .btn-secondary:active {
@@ -222,6 +223,7 @@ p {
     width: 16px;
     height: 16px;
     display: none;
+    color: black;
   }
 
   .btn-secondary:active {
