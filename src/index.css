@@ -202,6 +202,10 @@ p {
     display: none;
     color: black;
   }
+  
+  .btn-secondary:hover {
+    color: #000000
+  }
 
   .btn-secondary:active {
     color: black; /* Change the text color when button is tapped */
@@ -224,6 +228,10 @@ p {
     height: 16px;
     display: none;
     color: black;
+  }
+
+  .btn-secondary:hover {
+    color: #000000
   }
 
   .btn-secondary:active {
