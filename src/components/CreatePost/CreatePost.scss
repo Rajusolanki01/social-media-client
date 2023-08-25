@@ -35,7 +35,7 @@
 
     .label-img {
       display: inline-block;
-      background-color: var(--background-color);
+      background-color: #dff2df;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -47,7 +47,7 @@
 
       .label-Img:hover {
         color: #000000;
-        background-color: rgb(140, 199, 238);
+        background-color: #dff2df;
         box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
         transform: translateY(-2px);
       }
