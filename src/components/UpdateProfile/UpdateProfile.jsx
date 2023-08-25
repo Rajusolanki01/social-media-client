@@ -115,13 +115,13 @@ function UpdateProfile() {
             />
             <button
               style={{ marginTop: "15px" }}
-              className="btn-primary btn-primary-1"
+              className="btn-primary Button-1"
               onClick={handleSubmit}>
               Submit
             </button>
           </form>
           <button
-            className="delete-btn btn-secondary btn-secondary-1"
+            className="delete-btn btn-secondary Button-Second-1"
             onClick={handleDeleteConfirm}>
             Delete Account
           </button>
@@ -131,12 +131,12 @@ function UpdateProfile() {
                 <p>Are you sure you want to delete your account ?</p>
                 <div className="inside-button">
                   <button
-                    className="btn-secondary btn-secondary-1"
+                    className="btn-secondary Button-Second-1"
                     onClick={handleDeleteAccount}>
                     Yes
                   </button>
                   <button
-                    className="btn-secondary btn-secondary-1"
+                    className="btn-secondary Button-Second-1"
                     onClick={handleDeleteCancel}>
                     No
                   </button>

@@ -1,6 +1,6 @@
 import React from 'react';
 const FollowButton = ({ isFollowing, onFollowToggle }) => {
-  const buttonClass = isFollowing ? "btn-secondary btn-secondary-1 follow-link" : "btn-primary btn-primary-1 follow-link";
+  const buttonClass = isFollowing ? "btn-secondary Button-Second-1 follow-link" : "btn-primary Button-1 follow-link";
   const buttonText = isFollowing ? "Unfollow" : "Follow";
 
   return (
