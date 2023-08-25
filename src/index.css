@@ -14,26 +14,25 @@ body {
   font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: #dff2df;
-  scrollbar-width: thin; 
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); 
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 :root {
   --background-color: #dafeda;
   --border-color: #dafeda;
   --accent-color: #479bd3;
-  --scrollbar-thumb: #0b0b0bbb; 
-  --scrollbar-track: #f0efef; 
+  --scrollbar-thumb: #0b0b0bbb;
+  --scrollbar-track: #f0efef;
 }
 
-
 ::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb);
-  border-radius: 6px; 
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -72,11 +71,8 @@ p {
   margin-inline: auto;
 }
 
-
-
-
 .btn-primary {
-  --color: rgb(140, 199, 238);;
+  --color: rgb(140, 199, 238);
   padding: 0.7em 1.8em;
   background-color: #dff2df;
   border: 1px solid rgb(188, 218, 230);
@@ -187,4 +183,38 @@ p {
 
 .btn-secondary:active {
   filter: brightness(0.9);
+}
+
+@media screen and (max-width: 430px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.5em 1.2em; /* Adjust padding for smaller buttons */
+    font-size: 14px; /* Adjust font size for smaller buttons */
+  }
+
+  /* Adjust the ::before and ::after sizes for smaller buttons */
+  .btn-primary::before,
+  .btn-primary::after,
+  .btn-secondary::before,
+  .btn-secondary::after {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.5em 1.2em; /* Adjust padding for smaller buttons */
+    font-size: 14px; /* Adjust font size for smaller buttons */
+  }
+
+  /* Adjust the ::before and ::after sizes for smaller buttons */
+  .btn-primary::before,
+  .btn-primary::after,
+  .btn-secondary::before,
+  .btn-secondary::after {
+    width: 16px;
+    height: 16px;
+  }
 }
