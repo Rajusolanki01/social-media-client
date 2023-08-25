@@ -87,6 +87,8 @@
       height: 10px;
       display: none;
     }
-
+    .btn-secondary:active {
+      color: black; /* Change the text color when button is tapped */
+    }
   }
 }

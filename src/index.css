@@ -201,6 +201,10 @@ p {
     height: 16px;
     display: none;
   }
+
+  .btn-secondary:active {
+    color: black; /* Change the text color when button is tapped */
+  }
 }
 
 @media (max-width: 768px) {
@@ -218,5 +222,9 @@ p {
     width: 16px;
     height: 16px;
     display: none;
+  }
+
+  .btn-secondary:active {
+    color: black; /* Change the text color when button is tapped */
   }
 }
