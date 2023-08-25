@@ -185,7 +185,7 @@ p {
   filter: brightness(0.9);
 }
 
-@media screen and (max-width: 430px) {
+@media (max-width: 430px) {
   .btn-primary,
   .btn-secondary {
     padding: 0.5em 1.2em; /* Adjust padding for smaller buttons */
@@ -199,6 +199,7 @@ p {
   .btn-secondary::after {
     width: 16px;
     height: 16px;
+    display: none;
   }
 }
 
@@ -216,5 +217,6 @@ p {
   .btn-secondary::after {
     width: 16px;
     height: 16px;
+    display: none;
   }
 }
