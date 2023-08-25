@@ -25,24 +25,29 @@
 @media screen and (max-width: 430px) {
   .Follower {
     .btn-primary,
-    .btn-secondary {
-      padding: 0.5em 1em; /* Adjust padding for mobile */
-      font-size: 14px; /* Adjust font size for mobile */
-    }
+  .btn-secondary {
+    padding: 0.5em 1.2em; /* Adjust padding for smaller buttons */
+    font-size: 14px; /* Adjust font size for smaller buttons */
+  }
 
-    /* Adjust or remove pseudo-element sizes if necessary */
-    .btn-primary::before,
-    .btn-primary::after,
-    .btn-secondary::before,
-    .btn-secondary::after {
-      width: 10px;
-      height: 10px;
-      display: none;
-    }
+  /* Adjust the ::before and ::after sizes for smaller buttons */
+  .btn-primary::before,
+  .btn-primary::after,
+  .btn-secondary::before,
+  .btn-secondary::after {
+    width: 16px;
+    height: 16px;
+    display: none;
+    color: black;
+  }
 
-    .btn-secondary:active {
-      color: black; /* Change the text color when button is tapped */
-    }
+  .btn-secondary:hover {
+    color: #000000
+  }
+
+  .btn-secondary:active {
+    color: black; /* Change the text color when button is tapped */
+  }
     
   }
 }
